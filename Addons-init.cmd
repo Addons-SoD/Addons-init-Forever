@@ -1,5 +1,5 @@
 @echo off
-title Addons-init (WoW Forever) - Bootstrap for Addons-Fetcher
+title Addons-init-Forever - Bootstrap for Addons-Fetcher-Forever
 chcp 65001 >nul
 cd /d "%~dp0"
 powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "$env:INIT_SELF='%~f0'; $env:INIT_DIR='%~dp0'; $c=[IO.File]::ReadAllText('%~f0',[Text.Encoding]::UTF8); $m=([char]10).ToString()+'#PS'+'START'; $i=$c.IndexOf($m); if($i -lt 0){ Write-Host 'Script marker not found.'; exit 1 }; Invoke-Expression ($c.Substring($i+$m.Length))"
